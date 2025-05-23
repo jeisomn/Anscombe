@@ -4,14 +4,14 @@
 # Universidad Politécnica Salesiana
 
 **🏫 Carrera:** Ingeniería en Sistemas  
-**📅 Periodo:** 2025 - 2025 
+**📅 Periodo:** 2025 - 2025  
 **👨‍🎓 Estudiante:** Jeison Pañora
 
 ---
 
 ## 📊Introducción teórica al Cuarteto de Anscombe
 
-El Cuarteto de Anscombe es un conjunto de cuatro datasets con características estadísticas muy similares, pero con distribuciones gráficas muy diferentes. Fue creado por el estadístico Francis Anscombe en 1973 para mostrar la importancia de visualizar los datos antes de hacer análisis estadísticos. Aunque estos cuatro conjuntos tienen medias, varianzas, correlaciones y regresiones lineales casi idénticas, sus patrones gráficos son muy distintos, lo que demuestra que las estadísticas descriptivas por sí solas pueden ser insuficientes para interpretar los datos correctamente.
+El *Cuarteto de Anscombe* es un conjunto de cuatro datasets con características estadísticas muy similares, pero con distribuciones gráficas muy diferentes. Fue creado por el estadístico Francis Anscombe en 1973 para mostrar la importancia de visualizar los datos antes de hacer análisis estadísticos. Aunque estos cuatro conjuntos tienen medias, varianzas, correlaciones y regresiones lineales casi idénticas, sus patrones gráficos son muy distintos, lo que demuestra que las estadísticas descriptivas por sí solas pueden ser insuficientes para interpretar los datos correctamente.
 
 ![Ejemplo Cuarteto de Anscombe](https://es-academic.com/pictures/eswiki/65/Anscombe.svg)
 
@@ -43,8 +43,10 @@ Se utilizó Python el cual se encuentra en los archivos
 
 ## 🌐 URL del repositorio
 
-🔗 https://github.com/tu_usuario/Anscombe
+🔗 https://github.com/jeisomn/Anscombe
 
 ---
 
 📘 *Esta tarea forma parte de la asignatura de Minería de Datos, impartida en la Universidad Politécnica Salesiana.*
+
+---
