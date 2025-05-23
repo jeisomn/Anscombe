@@ -1,0 +1,65 @@
+---
+title: "Datasaurus a RMardown"
+author: "Jeison Pañora"
+date: "2025-04-03"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Code DatasauRus
+
+## Importación de las librerías
+
+```{r librarys}
+library(tidyverse)
+library(datasauRus)
+```
+
+## Carga del dataset datasaurus
+```{r}
+
+```
+
+```{r dataset}
+datasaurus_dozen %>%
+  group_by(dataset) %>%
+  summarise(
+    mean_x = mean(x),
+    mean_y = mean(y),
+    std_dev_x = sd(x),
+    std_dev_y = sd(y),
+    corr_x_y = cor(x, y)
+  )
+```
+
+## Gráficas a partir del dataset
+
+```{r grafica}
+ggplot(datasaurus_dozen, aes(x = x, y = y, colour = dataset))+
+  geom_point()+
+  theme_void()+
+  theme(legend.position = "none")+
+  facet_wrap(~dataset, ncol=3)
+```
+
+## Gráfica de la regresión de x_shape
+
+```{r}
+df_x <- subset(datasaurus_dozen, dataset == "x_shape")
+ggplot(df_x, aes(x = x, y = y)) +
+  geom_point(color = "deeppink", alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE, color = "black") +
+  ggtitle("Regresión lineal de x_shape") +
+  theme_minimal()
+```
+
+## Imagen realizada en clase
+
+```{r out.width = "50%"}
+knitr::include_graphics("C:/Users/jeiso/OneDrive/Escritorio/Uni/MineriaDatos/Anscombe/Anscombe/R/x_shape_regresion_lineal_manual.jpg")
+```
