@@ -1,0 +1,6 @@
+# Evitar archivos temporales de Jupyter
+.ipynb_checkpoints/
+
+# Evitar archivos de R
+.RData
+.Rhistory
