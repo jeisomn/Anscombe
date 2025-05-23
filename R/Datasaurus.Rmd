@@ -15,12 +15,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Importación de las librerías
 
-```{r librarys}
+Primero, cargamos las librerías necesarias para manipular datos y realizar gráficos: tidyverse para el manejo de datos y gráficos, y datasauRus que contiene el dataset.
+
+```{r librarys, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(datasauRus)
 ```
 
 ## Carga del dataset datasaurus
+
+En esta sección cargamos el datset y calculamos estadísticas descriptivas básicas para cada subconjunto del dataset, tales como la media, desviación estándar y correlación entre las variables x y y.
+
 ```{r}
 
 ```
@@ -37,7 +42,9 @@ datasaurus_dozen %>%
   )
 ```
 
-## Gráficas a partir del dataset
+## Gráfica de la visualización de los diferentes subgrupos.
+
+Aquí generamos una gráfica de dispersión con todos los subconjuntos, usando diferentes colores.
 
 ```{r grafica}
 ggplot(datasaurus_dozen, aes(x = x, y = y, colour = dataset))+
@@ -48,6 +55,8 @@ ggplot(datasaurus_dozen, aes(x = x, y = y, colour = dataset))+
 ```
 
 ## Gráfica de la regresión de x_shape
+
+Seleccionamos el dataset llamado "x_shape" para realizar una regresión lineal simple de y sobre x. Se muestra la nube de puntos y la línea de regresión ajustada para este subconjunto.
 
 ```{r}
 df_x <- subset(datasaurus_dozen, dataset == "x_shape")
@@ -60,6 +69,13 @@ ggplot(df_x, aes(x = x, y = y)) +
 
 ## Imagen realizada en clase
 
+Incluimos una imagen donde realizamos la regresión a mano, solo observando la forma que tienen los puntos, trazando una línea sin hacer ningún proceso previo, guiándonos únicamente por la distribución visual de los puntos.
+
 ```{r out.width = "50%"}
 knitr::include_graphics("C:/Users/jeiso/OneDrive/Escritorio/Uni/MineriaDatos/Anscombe/Anscombe/R/x_shape_regresion_lineal_manual.jpg")
 ```
+
+
+## Conclusión
+
+El análisis del dataset Datasaurus permitió comparar estadísticas y visualizar patrones distintos entre grupos. La regresión lineal aplicada mostró cómo varía la relación entre variables en un subconjunto específico, reforzando la importancia de combinar análisis estadístico y visual.
